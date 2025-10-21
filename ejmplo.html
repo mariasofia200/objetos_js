@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo del objeto window</title>
+</head>
+<body>
+  <h1>Ejemplo del objeto window</h1>
+  <button onclick="mostrarAlerta()">Mostrar alerta</button>
+  <button onclick="mostrarInfo()">Mostrar información de la ventana</button>
+  <button onclick="abrirVentana()">Abrir nueva ventana</button>
+
+  <script>
+    function mostrarAlerta() {
+      window.alert("¡Hola! Esta es una alerta usando window.alert()");
+    }
+
+    function mostrarInfo() {
+      const ancho = window.innerWidth;
+      const alto = window.innerHeight;
+      const url = window.location.href;
+      alert(`Tamaño de ventana: ${ancho}x${alto}\nURL actual: ${url}`);
+    }
+
+    function abrirVentana() {
+      window.open("https://www.google.com", "_blank");
+    }
+  </script>
+</body>
+</html>
